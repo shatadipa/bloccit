@@ -12,6 +12,8 @@ posts=Post.all
   Comment.create!(post: posts.sample, body: RandomData.random_paragraph)
 end
 
+p=Post.find_or_create_by!(title:'Unique Post', body:'Unique Post Body')
+Comment.find_or_create_by!(post: p, body: 'Unique Comment Body')
 puts "Seed finished"
 puts "#{Post.count} posts created"
 puts "#{Comment.count} comments created"
