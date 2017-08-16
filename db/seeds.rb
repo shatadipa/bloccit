@@ -1,8 +1,12 @@
 require 'random_data'
 
-50.times do
-
-  Post.create!(title: RandomData.random_sentence,
+50.times do |i|
+  if i%5==0
+    title='SPAM'
+  else
+    title=RandomData.random_sentence
+  end
+  Post.create!(title: title,
                body: RandomData.random_paragraph)
 end
 
