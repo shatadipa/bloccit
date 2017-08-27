@@ -10,14 +10,3 @@ RSpec.describe Comment, type: :model do
     end
   end
 end
-
-
-# class Post {
-#  private String title;
-#  private String body;
-# }
-#
-# class Comment {
-#   private Post post;
-#   private String body;
-# }
