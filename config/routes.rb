@@ -1,14 +1,4 @@
 Rails.application.routes.draw do
-  
-  # get 'advertisements/index'
-
-  # get 'advertisements/show'
-
-  # get 'advertisements/new'
-
-  # get 'advertisements/create'
-
-  resources :advertisements
 
   # get 'posts/index'
 
@@ -18,22 +8,17 @@ Rails.application.routes.draw do
 
   # get 'posts/edit'
 
-     resources :posts
+  resources :posts
+  resources :questions
+  resources :advertisements
 
+  #  get 'welcome/index'
 
-#   get 'welcome/index'
+  # get 'welcome/about'
 
-# get 'welcome/about'
-
-   get 'about' => 'welcome#about'
-   root 'welcome#index'
-
-
-
+  get 'about' => 'welcome#about'
+  root 'welcome#index'
   get 'welcome/contact'
-
   get 'welcome/faq'
 
-  
-  
 end
