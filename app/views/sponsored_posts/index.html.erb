@@ -1,0 +1,10 @@
+<h1>All Posts</h1>
+<% @sponsored_post.each do |sponsored_post| %>
+    <div class="media">
+      <div class="media-body">
+        <h4 class="media-heading">
+          <%= link_to sponsored_post.title, sponsored_post %>
+        </h4>
+      </div>
+    </div>
+<% end %>
